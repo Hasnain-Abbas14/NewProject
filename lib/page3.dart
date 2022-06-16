@@ -20,12 +20,12 @@ class _page3State extends State<page3> {
             children: [
               Center(child: Helper().customImage("images/Logo.png", 150, 150)),
               Helper().customText(
-                  "Welcome Back!", 16, FontWeight.bold, Colors.black),
+                  "Welcome Back!", 25, FontWeight.bold, Colors.black),
               SizedBox(
                 height: 15,
               ),
               Helper().customText(
-                  "Sign in to continue", 12, FontWeight.normal, Colors.black),
+                  "Sign in to continue", 15, FontWeight.normal, Colors.black),
               Padding(
                 padding: const EdgeInsets.only(left: 20.0, right: 20, top: 10),
                 child: Helper().customTextFieldPreIcon(
@@ -33,13 +33,13 @@ class _page3State extends State<page3> {
                     Colors.grey,
                     20,
                     "Username",
-                    10,
+                    20,
                     20,
                     Colors.grey,
-                    2,
+                    1,
                     12,
                     Colors.black,
-                    2,
+                    1,
                     12),
               ),
               Padding(
@@ -49,13 +49,13 @@ class _page3State extends State<page3> {
                     Colors.grey,
                     20,
                     "Password",
-                    10,
+                    20,
                     20,
                     Colors.grey,
-                    2,
+                    1,
                     12,
                     Colors.black,
-                    2,
+                    1,
                     12),
               ),
               Padding(
@@ -65,8 +65,8 @@ class _page3State extends State<page3> {
                   children: [
                     TextButton(
                       onPressed: () {},
-                      child: helper.customText("Forgot Password?", 12,
-                          FontWeight.normal, Colors.black),
+                      child: helper.customText("Forgot Password?", 16,
+                          FontWeight.bold, Colors.black),
                     )
                   ],
                 ),
@@ -83,15 +83,18 @@ class _page3State extends State<page3> {
                         });
                       },
                     ),
-                    Helper().customText("Remember me and Keep me logged in", 12,
+                    Helper().customText("Remember me and Keep me logged in", 15,
                         FontWeight.bold, Colors.grey),
                   ],
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.all(15.0),
-                child: Helper().customButton(
-                    page4(), "Sign in", Colors.white, Colors.black, 12),
+                child: Container(
+                  width: 330,
+                  child: Helper().customButton(
+                      page4(), "Sign in", Colors.white, Colors.black, 12),
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.all(20),
@@ -106,7 +109,7 @@ class _page3State extends State<page3> {
                     SizedBox(
                       width: 5,
                     ),
-                    Helper().customText("or Sign in with Google", 12,
+                    Helper().customText("or Sign in with Google", 15,
                         FontWeight.normal, Colors.grey),
                     SizedBox(
                       width: 5,
@@ -130,8 +133,11 @@ class _page3State extends State<page3> {
                     height: 50,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12)),
-                    child: Helper().customText("Sign in with Google", 16,
-                        FontWeight.bold, Colors.black),
+                    child: Container(
+                      width: 330,
+                      child: Helper().customText("                Sign in with Google", 16,
+                          FontWeight.bold, Colors.black),
+                    ),
                   ),
                 ),
               ),
@@ -139,15 +145,18 @@ class _page3State extends State<page3> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Helper().customText(
-                      "Not memeber yet?", 12, FontWeight.bold, Colors.grey),
+                      "Not memeber yet?", 16, FontWeight.bold, Colors.grey),
                   GestureDetector(
                       onTap: () {
                         Get.to(page4());
                       },
                       child: Helper().customText(
-                          "Sign Up", 12, FontWeight.normal, Colors.black))
+                          "Sign Up", 16, FontWeight.bold, Colors.black)),
+                         
                 ],
-              )
+              ),
+
+               SizedBox(height: 15,),
             ],
           ),
         ),

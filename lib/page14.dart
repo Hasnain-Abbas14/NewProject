@@ -52,7 +52,7 @@ class page14 extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Helper().customText(
-                                    "Quiz", 20, FontWeight.bold, Colors.white),
+                                    "Quiz", 25, FontWeight.bold, Colors.white),
                               ],
                             ),
                           
@@ -65,7 +65,7 @@ class page14 extends StatelessWidget {
                     left: 0,
                     right: 0,
                     child: Padding(
-                      padding: const EdgeInsets.all(15.0),
+                      padding: const EdgeInsets.only(top:15.0,left: 25,right: 25),
                       child: Container(
                         decoration: BoxDecoration(
                           color: Colors.grey[200],
@@ -146,35 +146,35 @@ class page14 extends StatelessWidget {
                   ),
                   Positioned(
                       top: 300,
-                      left: 20,
-                      right: 20,
+                      left: 25,
+                      right: 25,
                        child:Helper().customContainer(Colors.deepOrangeAccent, Colors.deepOrangeAccent, "Yakitori"),
                       ),
 
                         Positioned(
                       top: 380,
-                      left: 20,
-                      right: 20,
+                      left: 25,
+                      right: 25,
                        child:Helper().customContainer(Colors.black, Colors.black, "Grilled"),
                       ),
 
                         Positioned(
                       top: 460,
-                      left: 20,
-                      right: 20,
+                      left: 25,
+                      right: 25,
                        child:Helper().customContainer(Colors.green, Colors.green, "Sashmi"),
                       ),
 
                         Positioned(
                       top: 530,
-                      left: 20,
-                      right: 20,
+                      left: 25,
+                      right: 25,
                        child:Helper().customContainer(Colors.white, Colors.grey, "Bycicle"),
                       ),
                   Positioned(
                       top: 620,
-                      left: 20,
-                      right: 20,
+                      left: 25,
+                      right: 25,
                       child: Helper().customButton( Page15(), "Next", Colors.white, Colors.black, 12)
                            
                            

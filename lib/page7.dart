@@ -16,7 +16,7 @@ class page7 extends StatelessWidget {
           child: Column(
             children: [
               Padding(
-                padding: const EdgeInsets.only(left: 10.0, top: 15, right: 10),
+                padding: const EdgeInsets.only(left: 20.0, top: 15, right: 20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -45,7 +45,7 @@ class page7 extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(15),
+                padding: const EdgeInsets.only(top:15,left: 25,right: 25),
                 child: Card(
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12)),
@@ -54,17 +54,17 @@ class page7 extends StatelessWidget {
                         Colors.black,
                         20,
                         "Search group",
-                        10,
+                        20,
                         20,
                         Colors.white,
-                        2,
+                        1,
                         12,
                         Colors.white,
-                        2,
+                        1,
                         12)),
               ),
               Padding(
-                  padding: const EdgeInsets.only(left: 10.0),
+                  padding: const EdgeInsets.all( 20),
                   child: Row(
                     children: [
                       helper.customText("Practice English", 16, FontWeight.bold,
@@ -72,7 +72,7 @@ class page7 extends StatelessWidget {
                     ],
                   )),
               Padding(
-                padding: const EdgeInsets.all(10.0),
+                padding: const EdgeInsets.only(top:10.0,left: 20,right: 20),
                 child: Card(
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12)),
@@ -149,7 +149,7 @@ class page7 extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(10),
+                padding: const EdgeInsets.only(top:20,left: 20,right:20),
                 child: Row(
                   children: [
                     Text(
@@ -163,22 +163,22 @@ class page7 extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(10.0),
+                padding: const EdgeInsets.only(top:15.0,left: 20,right: 20),
                 child: helper.customClipper(
                     Colors.blue, "0%", "Home Words", "words reviewed 0/29"),
               ),
               Padding(
-                padding: const EdgeInsets.all(10.0),
+                padding: const EdgeInsets.only(top:15.0,left: 20,right: 20),
                 child: helper.customClipper(
                     Colors.orange, "24%", "Food Words", "words reviewed 12/29"),
               ),
               Padding(
-                padding: const EdgeInsets.all(10.0),
+                padding: const EdgeInsets.only(top:15.0,left: 20,right: 20),
                 child: helper.customClipper(
                     Colors.green, "0%", "Clothes Words", "words reviewed 0/29"),
               ),
               Padding(
-                padding: const EdgeInsets.all(10.0),
+                padding: const EdgeInsets.only(top:15.0,left: 20,right: 20),
                 child: helper.customClipper(Colors.orange, "24%",
                     "Travel Words", "words reviewed 12/29"),
               ),

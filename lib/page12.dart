@@ -14,7 +14,7 @@ class page12 extends StatelessWidget {
           child: Column(
             children: [
               Padding(
-                padding: const EdgeInsets.all(15.0),
+                padding: const EdgeInsets.only(top:15.0,left: 25,right: 25),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -28,7 +28,7 @@ class page12 extends StatelessWidget {
                             size: 20,
                           )),
                     ),
-                    Helper().customText("Subscription", 16, FontWeight.bold, Colors.black),
+                    Helper().customText("Subscription", 25, FontWeight.bold, Colors.black),
                     Card(
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(12)),
@@ -46,15 +46,17 @@ class page12 extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20,),
-              Helper().customText("Chose your plan", 14, FontWeight.normal, Colors.black),
+              Helper().customText("Chose your plan", 16, FontWeight.normal, Colors.black),
                Helper().customContainer1("MONTHLY","10/month"),
                 Helper().customContainer1("ANNUALY","100/year"),
 
-            
+             SizedBox(height: 50,),
         
 
-         Helper().customButton(page13(), "Continue to checkout", Colors.white, Colors.black, 12),
-
+         Container(
+          width: 340,
+          child: Helper().customButton(page13(), "Continue to checkout", Colors.white, Colors.black, 12)),
+ SizedBox(height: 20,),
 
             ],
             

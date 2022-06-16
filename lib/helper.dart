@@ -35,6 +35,7 @@ class Helper {
   ) {
     return TextField(
       decoration: InputDecoration(
+        
         suffixIcon: Icon(
           icon,
           color: iconcolor,
@@ -80,8 +81,8 @@ class Helper {
     return ClipRRect(
       borderRadius: BorderRadius.circular(12),
       child: Container(
-          width: 330,
-          height: 70,
+          // width: 330,
+          height: 90,
           decoration: BoxDecoration(
             color: Colors.white70,
             border: Border(
@@ -89,31 +90,53 @@ class Helper {
             ),
           ),
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               SizedBox(
                 width: 8,
               ),
-              CircleAvatar(
-                backgroundColor: Colors.black,
-                radius: 30,
-                child: CircleAvatar(
-                    backgroundColor: Colors.white,
-                    radius: 28,
-                    child: helper.customText(
-                        textPercentage, 14, FontWeight.normal, Colors.black)),
+              Expanded(
+                flex: 3,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    CircleAvatar(
+                      backgroundColor: Colors.black,
+                      radius: 30,
+                      child: CircleAvatar(
+                          backgroundColor: Colors.white,
+                          radius: 28,
+                          child: helper.customText(
+                              textPercentage, 14, FontWeight.normal, Colors.black)),
+                    ),
+                  ],
+                ),
               ),
-              SizedBox(width: 8),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  helper.customText(
-                      headingText, 16, FontWeight.bold, Colors.black),
-                  helper.customText(
-                      descriptionText, 16, FontWeight.normal, Colors.black)
-                ],
-              ),
-              SizedBox(width: 60),
-              Icon(Icons.arrow_forward_ios)
+             
+               Expanded(
+                
+                flex:8,
+                 child: Column(
+                     mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      helper.customText(
+                          headingText, 20, FontWeight.bold, Colors.black),
+                      helper.customText(
+                          descriptionText, 16, FontWeight.normal, Colors.grey.shade400)
+                    ],
+                  ),
+               ),
+              
+              // SizedBox(width: 60),
+              Expanded(
+                flex :2,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Expanded(child: Icon(Icons.arrow_forward_ios)),
+                  ],
+                ),
+              )
             ],
           )),
     );
@@ -171,7 +194,7 @@ class Helper {
       color: buttonColor,
       child: Helper().customText(
         buttonText,
-        16,
+        17,
         FontWeight.bold,
         textColor,
       ),
@@ -184,7 +207,10 @@ class Helper {
     IconData trailingIcon,
   ) {
     return ListTile(
-      title: Text(text),
+      title: Text(text,style: TextStyle(
+
+        fontSize: 18,
+      ),),
       // isThreeLine: true,
       // subtitle: Text('Secondary text\nTertiary text'),
       leading: Icon(leaadingIcon),
@@ -201,35 +227,39 @@ class Helper {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Card(
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Helper().customImage(firstFlagPath, 130, 130),
-              Helper().customText(
-                  firstFlagText, 12, FontWeight.normal, Colors.black),
-              SizedBox(
-                height: 8,
-              )
-            ],
+        Expanded(
+          child: Card(
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Helper().customImage(firstFlagPath, 150, 150),
+                Helper().customText(
+                    firstFlagText, 15, FontWeight.normal, Colors.black),
+                SizedBox(
+                  height: 8,
+                )
+              ],
+            ),
           ),
         ),
         SizedBox(width: 15),
-        Card(
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Helper().customImage(SecondFlagPath, 130, 130),
-              Helper().customText(
-                  secondFlagText, 12, FontWeight.normal, Colors.black),
-              SizedBox(
-                height: 8,
-              )
-            ],
+        Expanded(
+          child: Card(
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Helper().customImage(SecondFlagPath, 150, 150),
+                Helper().customText(
+                    secondFlagText, 15, FontWeight.normal, Colors.black),
+                SizedBox(
+                  height: 8,
+                )
+              ],
+            ),
           ),
         ),
       ],
@@ -240,17 +270,23 @@ class Helper {
     String text1,
     String text2,
   ) {
-    return Card(
-      child: Padding(
-        padding: const EdgeInsets.all(15.0),
-        child: Column(
-          children: [
-            Helper().customText(text1, 12, FontWeight.normal, Colors.black),
-            SizedBox(
-              height: 10,
-            ),
-            Helper().customText(text2, 12, FontWeight.normal, Colors.black),
-          ],
+    return Container(
+      width: 130,
+      height: 80,
+
+      child: Card(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+        child: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Column(
+            children: [
+              Helper().customText(text1, 12, FontWeight.normal, Colors.black),
+              SizedBox(
+                height: 5,
+              ),
+              Helper().customText(text2, 12, FontWeight.normal, Colors.black),
+            ],
+          ),
         ),
       ),
     );
@@ -258,64 +294,69 @@ class Helper {
 
   Widget customCliper2(
       String text1, String text2, String text3, Color bordercolor) {
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(12),
-      child: Container(
-          width: 330,
-          // height: 70,
-          decoration: BoxDecoration(
-            color: Colors.white70,
-            border: Border(
-              left: BorderSide(width: 5.0, color: bordercolor),
-            ),
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  children: [
-                    Helper()
-                        .customText(text1, 14, FontWeight.bold, Colors.black),
-                    SizedBox(
-                      height: 8,
-                    ),
-                    Helper()
-                        .customText(text2, 12, FontWeight.normal, Colors.black),
-                    SizedBox(
-                      height: 8,
-                    ),
-                    Helper()
-                        .customText(text3, 14, FontWeight.bold, Colors.black),
-                    SizedBox(
-                      height: 8,
-                    ),
-                    Icon(Icons.volume_up),
-                  ],
+    return Padding(
+      padding: const EdgeInsets.only(top:10.0,left: 25,right: 25),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(12),
+        child: 
+           Container(
+              //  width: 330,
+              // height: 70,
+              decoration: BoxDecoration(
+                color: Colors.white70,
+                border: Border(
+                  left: BorderSide(width: 5.0, color: bordercolor),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(top: 38.0, right: 10),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    MaterialButton(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12)),
-                        onPressed: () {},
-                        color: Colors.white,
-                        child: Helper().customText(
-                          "Review",
-                          16,
-                          FontWeight.bold,
-                          Colors.black,
-                        )),
-                  ],
-                ),
-              ),
-            ],
-          )),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(top:10.0,right:20,left: 20),
+                    child: Column(
+                      children: [
+                        Helper()
+                            .customText(text1, 14, FontWeight.bold, Colors.black),
+                        SizedBox(
+                          height: 8,
+                        ),
+                        Helper()
+                            .customText(text2, 12, FontWeight.normal, Colors.black),
+                        SizedBox(
+                          height: 8,
+                        ),
+                        Helper()
+                            .customText(text3, 14, FontWeight.bold, Colors.black),
+                        SizedBox(
+                          height: 8,
+                        ),
+                        Icon(Icons.volume_up),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 38.0, right: 10),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        MaterialButton(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12)),
+                            onPressed: () {},
+                            color: Colors.white,
+                            child: Helper().customText(
+                              "Review",
+                              16,
+                              FontWeight.bold,
+                              Colors.black,
+                            )),
+                      ],
+                    ),
+                  ),
+                ],
+              )),
+        
+      ),
     );
   }
 
@@ -372,7 +413,7 @@ class Helper {
               child: Row(
                 mainAxisAlignment:MainAxisAlignment.spaceBetween,
                 children: [
-                Helper().customText(text, 12, FontWeight.normal, Colors.black),
+                Helper().customText(text, 16, FontWeight.normal, Colors.black),
                 Icon(Icons.arrow_forward_ios,)
               ],),
             );
@@ -430,7 +471,7 @@ class Helper {
     Widget customContainer1(String text,String text2){
 
          return  Padding(
-                 padding: const EdgeInsets.all(15.0),
+                 padding: const EdgeInsets.only(top:15.0,left: 25,right: 25),
                  child: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(12),
@@ -439,11 +480,11 @@ class Helper {
                   child: Column(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.all(15.0),
+                        padding: const EdgeInsets.only(top:15.0,left: 25,right: 25),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Helper().customText(text, 14, FontWeight.normal, Colors.grey),
+                            Helper().customText(text, 20, FontWeight.normal, Colors.grey),
                             Radio(
                                       value: 1,
                                       activeColor: Colors.blue,
@@ -460,7 +501,7 @@ class Helper {
                          padding: const EdgeInsets.all(15.0),
                          child: Row(
                            children: [
-                             Helper().customText(text2, 14, FontWeight.bold, Colors.black),
+                             Helper().customText(text2, 16, FontWeight.bold, Colors.black),
                              SizedBox(height: 10,),
                               
                            ],
@@ -475,7 +516,7 @@ class Helper {
                          child: Row(
                            children: [
                             Icon(Icons.check),
-                             Helper().customText("Unlimited words", 14, FontWeight.normal, Colors.black),
+                             Helper().customText("Unlimited words", 15, FontWeight.normal, Colors.black),
                              SizedBox(height: 10,),
                               
                            ],
@@ -487,7 +528,7 @@ class Helper {
                          child: Row(
                            children: [
                             Icon(Icons.check),
-                             Helper().customText("Unlimited language", 14, FontWeight.normal, Colors.black),
+                             Helper().customText("Unlimited language", 15, FontWeight.normal, Colors.black),
                              SizedBox(height: 10,),
                               
                            ],
@@ -499,7 +540,7 @@ class Helper {
                          child: Row(
                            children: [
                             Icon(Icons.check),
-                             Helper().customText("Unlimited Sentences", 14, FontWeight.normal, Colors.black),
+                             Helper().customText("Unlimited Sentences", 15, FontWeight.normal, Colors.black),
                              SizedBox(height: 10,),
                               
                            ],
@@ -510,7 +551,7 @@ class Helper {
                          child: Row(
                            children: [
                             Icon(Icons.check),
-                             Helper().customText("Listen to every word and sentence", 14, FontWeight.normal, Colors.black),
+                             Helper().customText("Listen to every word and sentence", 15, FontWeight.normal, Colors.black),
                              SizedBox(height: 10,),
                               
                            ],

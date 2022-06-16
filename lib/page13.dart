@@ -17,7 +17,7 @@ class page13 extends StatelessWidget {
             children: [
 
               Padding(
-                padding: const EdgeInsets.only(left: 10.0, top: 15, right: 10),
+                padding: const EdgeInsets.only(left: 25.0, top: 15, right: 25),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -33,7 +33,7 @@ class page13 extends StatelessWidget {
                             size: 20,
                           ),
                         )),
-                     Helper().customText("Quiz", 16, FontWeight.bold, Colors.black),
+                     Helper().customText("Quiz", 25, FontWeight.bold, Colors.black),
 
                         
                     Card(
@@ -53,7 +53,7 @@ class page13 extends StatelessWidget {
 
                   Padding(
                     padding: const EdgeInsets.all(30.0),
-                    child: Helper().customText("Chose the Quiz Type", 14, FontWeight.normal, Colors.black),
+                    child: Helper().customText("Chose the Quiz Type", 20, FontWeight.normal, Colors.black),
                   ),
 
 
@@ -61,20 +61,28 @@ class page13 extends StatelessWidget {
                     padding: const EdgeInsets.only(top:60.0),
                     child: Center(
                       child: Container(
-                        height: 80,
-                        width: 100,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(12)
+                        ),
+                        height: 139,
+                        width: 150,
                         child: helper.customCard("Word", "Quiz")),
                     ),
                   ),
                   SizedBox(height: 20,),
                    Container(
-                    height: 80,
-                    width: 100,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12)
+                    ),
+                    height: 130,
+                    width: 150,
                     child: Helper().customCard("Meaning", "Quiz")),
 
                     Padding(
-                      padding: const EdgeInsets.only(top:170.0),
-                      child: Helper().customButton(page14(), "Next",Colors.white, Colors.black, 12),
+                      padding: const EdgeInsets.only(top:140.0),
+                      child: Container(
+                        width: 320,
+                        child: Helper().customButton(page14(), "Next",Colors.white, Colors.black, 12)),
                     ),
             ],
           ),

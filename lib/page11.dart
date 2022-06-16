@@ -26,7 +26,7 @@ class page11 extends StatelessWidget {
                     }, icon:Icon(Icons.menu))),
                     Expanded(
                       flex: 9,
-                      child: Center(child: Container(child: Helper().customText("General Setting", 16, FontWeight.bold, Colors.black)))),
+                      child: Center(child: Container(child: Helper().customText("General Setting", 25, FontWeight.bold, Colors.black)))),
                  ],
                ),
              ),
@@ -36,7 +36,7 @@ class page11 extends StatelessWidget {
                padding: const EdgeInsets.only(left:15,right:15),
                child: Row(
                  children: [
-                   Helper().customText("John Doe", 14, FontWeight.bold, Colors.black),
+                   Helper().customText("John Doe", 20, FontWeight.bold, Colors.black),
                  ],
                ),
              ),
@@ -45,7 +45,7 @@ class page11 extends StatelessWidget {
                padding: const EdgeInsets.only(left:15,right:15),
                child: Row(
                  children: [
-                   Helper().customText("JohnDoe@example.com", 14, FontWeight.normal, Colors.black),
+                   Helper().customText("JohnDoe@example.com", 16, FontWeight.normal, Colors.black),
                  ],
                ),
              ),
@@ -62,7 +62,7 @@ class page11 extends StatelessWidget {
                   color:Colors.white,
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Helper().customText("Profile", 12, FontWeight.normal, Colors.black,),
+                    child: Helper().customText("Profile", 16, FontWeight.normal, Colors.black,),
                   ),
                  ),
                ),
@@ -87,7 +87,7 @@ class page11 extends StatelessWidget {
                   color:Colors.white,
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Helper().customText("Notifications", 12, FontWeight.normal, Colors.black),
+                    child: Helper().customText("Notifications", 16, FontWeight.normal, Colors.black),
                   ),
                  ),
                ),
@@ -107,7 +107,7 @@ class page11 extends StatelessWidget {
                   // color:Colors.white,
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Helper().customText("Puch Notifications", 12, FontWeight.normal, Colors.black),
+                    child: Helper().customText("Puch Notifications", 16, FontWeight.normal, Colors.black),
                   ),
                  ),
                ),
@@ -127,7 +127,7 @@ class page11 extends StatelessWidget {
                   color:Colors.white,
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Helper().customText("General", 12, FontWeight.normal, Colors.black),
+                    child: Helper().customText("General", 16, FontWeight.normal, Colors.black),
                   ),
                  ),
                ),

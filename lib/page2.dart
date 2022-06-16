@@ -8,17 +8,18 @@ class page2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // backgroundColor: Colors.red,
         body: SafeArea(
       child: Stack(
         children: [
           Positioned(
-              top: 20, left: 0, right: 0, child: Image.asset("images/man.png")),
+              top: 0, left: 0, right: 0, child: Image.asset("images/man 2.png")),
           Positioned(
               bottom: 0,
               left: 0,
               right: 0,
               child: Container(
-                height: 340,
+                height: 330,
                 decoration: BoxDecoration(
                   boxShadow: [
                     BoxShadow(
@@ -39,15 +40,18 @@ class page2 extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Helper().customText("YOUR PERSONAL \n   VOCABULARY", 16,
-                          FontWeight.bold, Colors.black),
+                      Helper().customText("YOUR PERSONAL \n   VOCABULARY", 25,
+                          FontWeight.w700, Colors.black),
                       Helper().customText(
                           "  A simple but very useful application  for  \nyou.A sami dictoinary will helps you learn any\n                       language you want!",
-                          16,
+                          15,
                           FontWeight.normal,
-                          Colors.black),
-                      Helper().customButton(page3(), "Get Started",
-                          Colors.white, Colors.black, 12),
+                          Colors.grey.shade500),
+                      Container(
+                        width: 150,
+                        child: Helper().customButton(page3(), "Get Started",
+                            Colors.white, Colors.black, 12),
+                      ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [

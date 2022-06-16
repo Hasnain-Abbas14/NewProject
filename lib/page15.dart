@@ -13,7 +13,7 @@ class _Page15State extends State<Page15> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(12.0),
+          padding: const EdgeInsets.all(25.0),
           child: Column(
             children: [
               Row(
@@ -23,7 +23,7 @@ class _Page15State extends State<Page15> {
                   Spacer(),
                   Text(
                     'Notifications',
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                   ),
                   Spacer()
                 ],
@@ -79,7 +79,7 @@ class _Page15State extends State<Page15> {
                         ],
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 14.0),
+                        padding: const EdgeInsets.only(left: 25.0,right: 25,top: 15),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -160,7 +160,7 @@ class _Page15State extends State<Page15> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'Creating Word for Easier and Faster',
+                              'Creating Word for Easier \nand Faster',
                               style: TextStyle(color: Colors.grey),
                             ),
                             SizedBox(

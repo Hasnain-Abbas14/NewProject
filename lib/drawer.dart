@@ -44,7 +44,7 @@ class _DraweerState extends State<Draweer> {
                     child: Row(
                       children: [
                         CircleAvatar(
-                          backgroundColor: Colors.grey,
+                          backgroundColor: Colors.grey.shade300,
                         ),
                         SizedBox(
                           width: 15,
@@ -52,9 +52,9 @@ class _DraweerState extends State<Draweer> {
                         Column(
                           children: [
                             helper.customText(
-                                "john", 12, FontWeight.normal, Colors.white),
+                                "john", 20, FontWeight.normal, Colors.white),
                             helper.customText(
-                                "@john", 12, FontWeight.normal, Colors.grey),
+                                "@john", 16, FontWeight.normal, Colors.grey),
                           ],
                         ),
                         SizedBox(
@@ -86,8 +86,11 @@ class _DraweerState extends State<Draweer> {
             SizedBox(
               height: 70,
             ),
-            helper.customButton(
-                page9(), "Log out", Colors.white, Colors.black, 12),
+            Container(
+              width: 150,
+              child: helper.customButton(
+                  page9(), "Log out", Colors.white, Colors.black, 12),
+            ),
           ],
         ),
       ),
