@@ -17,7 +17,7 @@ class page14 extends StatelessWidget {
             children: [
               Stack(
                 fit: StackFit.loose,
-                overflow: Overflow.visible,
+                // overflow:Overflow.visile,
                 children: [
                   Positioned(
                   
@@ -235,7 +235,7 @@ class page14 extends StatelessWidget {
              ),
 
              Stack(
-              overflow:Overflow.visible,
+              // overflow:Overflow.visible,
               children: [
                 Positioned(
                   // top:0,

@@ -51,7 +51,7 @@ class _Page15State extends State<Page15> {
                       Column(
                         children: [
                           Stack(
-                            overflow: Overflow.visible,
+                            // overflow: Overflow.visible,
                             children: [
                               Positioned(
                                 child: Container(
@@ -127,7 +127,7 @@ class _Page15State extends State<Page15> {
                       Column(
                         children: [
                           Stack(
-                            overflow: Overflow.visible,
+                            // overflow: Overflow.visible,
                             children: [
                               Positioned(
                                 child: Container(
@@ -203,7 +203,7 @@ class _Page15State extends State<Page15> {
                       Column(
                         children: [
                           Stack(
-                            overflow: Overflow.visible,
+                            // overflow: Overflow.visible,
                             children: [
                               Positioned(
                                 child: Container(
@@ -279,7 +279,7 @@ class _Page15State extends State<Page15> {
                       Column(
                         children: [
                           Stack(
-                            overflow: Overflow.visible,
+                            // overflow: Overflow.visible,
                             children: [
                               Positioned(
                                 child: Container(
