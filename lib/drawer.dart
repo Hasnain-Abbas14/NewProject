@@ -26,13 +26,14 @@ class _DraweerState extends State<Draweer> {
               child: Column(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(left: 10.0),
+                    padding: const EdgeInsets.only(left: 10.0,right: 0),
                     child: Row(
                       children: [
                         Icon(
                           Icons.arrow_back,
                           color: Colors.white,
                         ),
+
                       ],
                     ),
                   ),
@@ -57,13 +58,12 @@ class _DraweerState extends State<Draweer> {
                                 "@john", 16, FontWeight.normal, Colors.grey),
                           ],
                         ),
-                        SizedBox(
-                          width: 170,
-                        ),
+                       Spacer(),
                         Icon(
                           Icons.arrow_forward_ios,
                           color: Colors.white,
                         ),
+                        SizedBox(width: 19,)
                       ],
                     ),
                   )
@@ -84,7 +84,7 @@ class _DraweerState extends State<Draweer> {
             helper.customListTile(
                 "General Settings", Icons.settings, Icons.arrow_forward_ios),
             SizedBox(
-              height: 70,
+              height: 100,
             ),
             Container(
               width: 150,

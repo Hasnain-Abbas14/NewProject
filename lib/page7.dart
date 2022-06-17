@@ -80,27 +80,30 @@ class page7 extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(10.0),
                     child: Container(
-                      height: 100,
+                      height: 150,
                       child: Stack(
                         children: [
                           Positioned(
                               top: 2,
                               right: 2,
+
                               child: Image.asset(
                                 'images/cat.png',
                                 height: 50,
                                 width: 50,
                               )),
                           Positioned(
+
                             child: Row(
                               children: [
                                 helper.customText(
-                                    "Cat", 16, FontWeight.bold, Colors.white),
+                                    "\t\tCat", 16, FontWeight.bold, Colors.white),
                               ],
                             ),
                           ),
                           Positioned(
                             top: 30,
+                            left: 10,
                             child: Row(
                               children: [
                                 helper.customText(
@@ -115,7 +118,8 @@ class page7 extends StatelessWidget {
                             height: 25,
                           ),
                           Positioned(
-                            top: 80,
+                            top: 115,
+                            left: 15,
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
@@ -128,7 +132,7 @@ class page7 extends StatelessWidget {
                             ),
                           ),
                           Positioned(
-                            top: 60,
+                            top: 100,
                             right: 2,
                             child: MaterialButton(
                                 shape: RoundedRectangleBorder(
@@ -137,8 +141,8 @@ class page7 extends StatelessWidget {
                                 color: Colors.white,
                                 child: helper.customText(
                                   "View More",
-                                  16,
-                                  FontWeight.bold,
+                                  13,
+                                  FontWeight.normal,
                                   Colors.black,
                                 )),
                           )

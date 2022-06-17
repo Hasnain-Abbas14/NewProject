@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
 class Page15 extends StatefulWidget {
-
-
   @override
   State<Page15> createState() => _Page15State();
 }
@@ -23,7 +21,7 @@ class _Page15State extends State<Page15> {
                   Spacer(),
                   Text(
                     'Notifications',
-                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
                   Spacer()
                 ],
@@ -39,7 +37,7 @@ class _Page15State extends State<Page15> {
                       Text(
                         'Today',
                         style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.bold),
+                            fontSize: 16, fontWeight: FontWeight.bold),
                       ),
                     ],
                   ),
@@ -51,7 +49,7 @@ class _Page15State extends State<Page15> {
                       Column(
                         children: [
                           Stack(
-                            // overflow: Overflow.visible,
+                            overflow: Overflow.visible,
                             children: [
                               Positioned(
                                 child: Container(
@@ -69,7 +67,7 @@ class _Page15State extends State<Page15> {
                                     height: 28,
                                     width: 28,
                                     decoration: BoxDecoration(
-                                        color: Colors.grey,
+                                        color: Colors.green[200],
                                         borderRadius:
                                             BorderRadius.circular(12)),
                                     child: Icon(Icons.add_box),
@@ -79,7 +77,8 @@ class _Page15State extends State<Page15> {
                         ],
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 25.0,right: 25,top: 15),
+                        padding: const EdgeInsets.only(
+                            left: 25.0, right: 25, top: 15),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -92,7 +91,7 @@ class _Page15State extends State<Page15> {
                             ),
                             Text(
                               'Pronunciation',
-                              style: TextStyle(fontWeight: FontWeight.bold),
+                              style: TextStyle(fontWeight: FontWeight.normal),
                             ),
                             SizedBox(
                               height: 10,
@@ -114,7 +113,7 @@ class _Page15State extends State<Page15> {
                         style: TextStyle(color: Colors.grey),
                       ),
                       SizedBox(
-                        width: 105,
+                        width: 57,
                       ),
                       Spacer(),
                     ],
@@ -127,14 +126,14 @@ class _Page15State extends State<Page15> {
                       Column(
                         children: [
                           Stack(
-                            // overflow: Overflow.visible,
+                            overflow: Overflow.visible,
                             children: [
                               Positioned(
                                 child: Container(
                                   height: 80,
                                   width: 80,
                                   decoration: BoxDecoration(
-                                      color: Colors.teal[200],
+                                      color: Colors.lightGreen[200],
                                       borderRadius: BorderRadius.circular(12)),
                                 ),
                               ),
@@ -142,20 +141,22 @@ class _Page15State extends State<Page15> {
                                   top: -9,
                                   right: -9,
                                   child: Container(
-                                    height: 28,
-                                    width: 28,
-                                    decoration: BoxDecoration(
-                                        color: Colors.grey,
-                                        borderRadius:
-                                            BorderRadius.circular(12)),
-                                    child: Icon(Icons.message)
-                                  ))
+                                      height: 28,
+                                      width: 28,
+                                      decoration: BoxDecoration(
+                                          color: Colors.orange[200],
+                                          borderRadius:
+                                              BorderRadius.circular(12)),
+                                      child: Icon(
+                                        Icons.message,
+                                        size: 20,
+                                      )))
                             ],
                           ),
                         ],
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 14.0),
+                        padding: const EdgeInsets.only(left: 30.0),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -168,7 +169,7 @@ class _Page15State extends State<Page15> {
                             ),
                             Text(
                               'thank you so much!',
-                              style: TextStyle(fontWeight: FontWeight.bold),
+                              style: TextStyle(fontWeight: FontWeight.normal),
                             ),
                             SizedBox(
                               height: 10,
@@ -190,7 +191,7 @@ class _Page15State extends State<Page15> {
                         style: TextStyle(color: Colors.grey),
                       ),
                       SizedBox(
-                        width: 105,
+                        width: 57,
                       ),
                       Spacer(),
                     ],
@@ -203,14 +204,14 @@ class _Page15State extends State<Page15> {
                       Column(
                         children: [
                           Stack(
-                            // overflow: Overflow.visible,
+                            overflow: Overflow.visible,
                             children: [
                               Positioned(
                                 child: Container(
                                   height: 80,
                                   width: 80,
                                   decoration: BoxDecoration(
-                                      color: Colors.teal[200],
+                                      color: Colors.lightGreen[200],
                                       borderRadius: BorderRadius.circular(12)),
                                 ),
                               ),
@@ -218,20 +219,19 @@ class _Page15State extends State<Page15> {
                                   top: -9,
                                   right: -9,
                                   child: Container(
-                                    height: 28,
-                                    width: 28,
-                                    decoration: BoxDecoration(
-                                        color: Colors.grey,
-                                        borderRadius:
-                                            BorderRadius.circular(12)),
-                                    child: Icon(Icons.favorite)
-                                  ))
+                                      height: 28,
+                                      width: 28,
+                                      decoration: BoxDecoration(
+                                          color: Colors.orange[200],
+                                          borderRadius:
+                                              BorderRadius.circular(12)),
+                                      child: Icon(Icons.favorite)))
                             ],
                           ),
                         ],
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 14.0),
+                        padding: const EdgeInsets.only(left: 30.0),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -244,7 +244,7 @@ class _Page15State extends State<Page15> {
                             ),
                             Text(
                               'Pronunciation',
-                              style: TextStyle(fontWeight: FontWeight.bold),
+                              style: TextStyle(fontWeight: FontWeight.normal),
                             ),
                             SizedBox(
                               height: 10,
@@ -266,7 +266,7 @@ class _Page15State extends State<Page15> {
                         style: TextStyle(color: Colors.grey),
                       ),
                       SizedBox(
-                        width: 105,
+                        width: 57,
                       ),
                       Spacer(),
                     ],
@@ -279,7 +279,7 @@ class _Page15State extends State<Page15> {
                       Column(
                         children: [
                           Stack(
-                            // overflow: Overflow.visible,
+                            overflow: Overflow.visible,
                             children: [
                               Positioned(
                                 child: Container(
@@ -297,7 +297,7 @@ class _Page15State extends State<Page15> {
                                     height: 28,
                                     width: 28,
                                     decoration: BoxDecoration(
-                                        color: Colors.grey,
+                                        color: Colors.green[200],
                                         borderRadius:
                                             BorderRadius.circular(12)),
                                     child: Icon(Icons.add),
@@ -307,7 +307,7 @@ class _Page15State extends State<Page15> {
                         ],
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 14.0),
+                        padding: const EdgeInsets.only(left: 30.0),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -320,7 +320,7 @@ class _Page15State extends State<Page15> {
                             ),
                             Text(
                               'Pronunciation',
-                              style: TextStyle(fontWeight: FontWeight.bold),
+                              style: TextStyle(fontWeight: FontWeight.normal),
                             ),
                             SizedBox(
                               height: 10,
@@ -342,7 +342,7 @@ class _Page15State extends State<Page15> {
                         style: TextStyle(color: Colors.grey),
                       ),
                       SizedBox(
-                        width: 105,
+                        width: 57,
                       ),
                       Spacer(),
                     ],
