@@ -14,22 +14,23 @@ class _page3State extends State<page3> {
   Widget build(BuildContext context) {
     var helper = Helper();
     return Scaffold(
+      backgroundColor: Color(0xffF4F4F4),
       body: SingleChildScrollView(
         child: SafeArea(
           child: Column(
             children: [
               Center(child: Helper().customImage("images/Logo.png", 150, 150)),
               Helper().customText(
-                  "Welcome Back!", 25, FontWeight.bold, Colors.black),
+                  "Welcome Back!", 25, FontWeight.w600, Colors.black),
               SizedBox(
                 height: 15,
               ),
               Helper().customText(
-                  "Sign in to continue", 15, FontWeight.normal, Colors.black),
+                  "Sign in to continue", 15, FontWeight.normal, Colors.grey),
               Padding(
-                padding: const EdgeInsets.only(left: 20.0, right: 20, top: 10),
+                padding: const EdgeInsets.only(left: 20.0, right: 20, top: 15),
                 child: Helper().customTextFieldPreIcon(
-                    Icons.person,
+                    Icons.people_alt_outlined,
                     Colors.grey,
                     20,
                     "Username",
@@ -43,9 +44,9 @@ class _page3State extends State<page3> {
                     12),
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 20.0, right: 20, top: 10),
+                padding: const EdgeInsets.only(left: 20.0, right: 20, top: 15),
                 child: Helper().customTextFieldPreIcon(
-                    Icons.lock,
+                    Icons.lock_outline,
                     Colors.grey,
                     20,
                     "Password",
@@ -59,14 +60,14 @@ class _page3State extends State<page3> {
                     12),
               ),
               Padding(
-                padding: const EdgeInsets.all(15.0),
+                padding: const EdgeInsets.only(left: 15.0, right: 15, top: 15),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     TextButton(
                       onPressed: () {},
                       child: helper.customText("Forgot Password?", 16,
-                          FontWeight.bold, Colors.black),
+                          FontWeight.w600, Colors.black),
                     )
                   ],
                 ),
@@ -84,14 +85,15 @@ class _page3State extends State<page3> {
                       },
                     ),
                     Helper().customText("Remember me and Keep me logged in", 15,
-                        FontWeight.bold, Colors.grey),
+                        FontWeight.w400, Colors.grey),
                   ],
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(15.0),
+                padding: const EdgeInsets.only(
+                    left: 25, right: 25, bottom: 15, top: 10),
                 child: Container(
-                  width: 330,
+                  width: double.infinity,
                   child: Helper().customButton(
                       page4(), "Sign in", Colors.white, Colors.black, 12),
                 ),
@@ -130,33 +132,37 @@ class _page3State extends State<page3> {
                   child: MaterialButton(
                     onPressed: () {},
                     minWidth: 250,
-                    height: 50,
+                    height: 55,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12)),
                     child: Container(
                       width: 330,
-                      child: Helper().customText("                Sign in with Google", 16,
+                      alignment: Alignment.center,
+                      child: Helper().customText(" Sign in with Google", 16,
                           FontWeight.bold, Colors.black),
                     ),
                   ),
                 ),
               ),
+              SizedBox(
+                height: 20,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Helper().customText(
-                      "Not memeber yet?", 16, FontWeight.bold, Colors.grey),
+                      "Not memeber yet?", 16, FontWeight.w500, Colors.grey),
                   GestureDetector(
                       onTap: () {
                         Get.to(page4());
                       },
                       child: Helper().customText(
                           "Sign Up", 16, FontWeight.bold, Colors.black)),
-                         
                 ],
               ),
-
-               SizedBox(height: 15,),
+              SizedBox(
+                height: 15,
+              ),
             ],
           ),
         ),

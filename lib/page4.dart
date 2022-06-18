@@ -10,21 +10,22 @@ class page4 extends StatelessWidget {
   Widget build(BuildContext context) {
     var helper = Helper();
     return Scaffold(
+      backgroundColor: Color(0xffF4F4F4),
       body: SingleChildScrollView(
         child: SafeArea(
           child: Column(
             children: [
               Center(child: Helper().customImage("images/Logo.png", 150, 150)),
-              Helper().customText("Sign Up", 25, FontWeight.bold, Colors.black),
+              Helper().customText("Sign Up", 25, FontWeight.w600, Colors.black),
               SizedBox(
                 height: 15,
               ),
-              Helper().customText(
-                  "Create a new account", 15, FontWeight.normal, Colors.grey.shade400),
+              Helper().customText("Create a new account", 15, FontWeight.normal,
+                  Colors.grey.shade400),
               Padding(
                 padding: const EdgeInsets.only(left: 25.0, right: 25, top: 25),
                 child: Helper().customTextFieldPreIcon(
-                    Icons.email,
+                    Icons.email_outlined,
                     Colors.grey,
                     20,
                     "Email",
@@ -40,7 +41,7 @@ class page4 extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 25.0, right: 25, top: 15),
                 child: Helper().customTextFieldPreIcon(
-                    Icons.person,
+                    Icons.people_alt_outlined,
                     Colors.grey,
                     20,
                     "Username",
@@ -56,7 +57,7 @@ class page4 extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 25.0, right: 25, top: 15),
                 child: Helper().customTextFieldPreIcon(
-                    Icons.lock,
+                    Icons.lock_outline,
                     Colors.grey,
                     20,
                     "Password",
@@ -72,7 +73,7 @@ class page4 extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 25.0, right: 25, top: 15),
                 child: Helper().customTextFieldPreIcon(
-                    Icons.lock,
+                    Icons.lock_outline,
                     Colors.grey,
                     20,
                     "Confirm Password",
@@ -86,24 +87,24 @@ class page4 extends StatelessWidget {
                     12),
               ),
               Padding(
-                padding: const EdgeInsets.only(top:15.0,left: 25,right: 25),
+                padding: const EdgeInsets.only(top: 15.0, left: 25, right: 25),
                 child: Container(
                   width: 330,
                   child: Container(
                     width: 270,
                     child: Helper().customButton(
-                        page5(), "Sign Up", Colors.white, Colors.black, 12),
+                        page5(), "Sign up", Colors.white, Colors.black, 12),
                   ),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top:15,left: 30,right: 30),
+                padding: const EdgeInsets.only(top: 15, left: 30, right: 30),
                 child: Row(
                   children: [
                     Expanded(
                         child: Divider(
                       thickness: 2,
-                      color: Colors.grey,
+                      color: Colors.grey[300],
                     )),
                     SizedBox(
                       width: 5,
@@ -116,7 +117,7 @@ class page4 extends StatelessWidget {
                     Expanded(
                         child: Divider(
                       thickness: 2,
-                      color: Colors.grey,
+                      color: Colors.grey[300],
                     )),
                   ],
                 ),
@@ -134,8 +135,11 @@ class page4 extends StatelessWidget {
                         borderRadius: BorderRadius.circular(12)),
                     child: Container(
                       width: 330,
-                      child: Helper().customText("                  Sign Up with Google", 16,
-                          FontWeight.bold, Colors.black),
+                      child: Helper().customText(
+                          "                  Sign Up with Google",
+                          16,
+                          FontWeight.w600,
+                          Colors.black),
                     ),
                   ),
                 ),
@@ -144,7 +148,7 @@ class page4 extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Helper().customText(
-                      "Already member?", 16, FontWeight.bold, Colors.grey),
+                      "Already member?", 16, FontWeight.w600, Colors.grey),
                   GestureDetector(
                       onTap: () {
                         Get.to(page3());

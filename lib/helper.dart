@@ -42,6 +42,8 @@ class Helper {
           size: iconsize,
         ),
         hintText: hinttext,
+        fillColor: Colors.white,
+        filled: true,
         contentPadding: EdgeInsets.symmetric(
             vertical: contentPadingVertical,
             horizontal: contentPadinghorizontal),
@@ -79,12 +81,13 @@ class Helper {
   ) {
     Helper helper = Helper();
     return ClipRRect(
-      borderRadius: BorderRadius.circular(12),
+      borderRadius: BorderRadius.circular(16),
       child: Container(
           // width: 330,
           height: 90,
           decoration: BoxDecoration(
             color: Colors.white70,
+            // borderRadius: BorderRadius.circular(16),
             border: Border(
               left: BorderSide(width: 5.0, color: bordercolor),
             ),
@@ -126,7 +129,7 @@ class Helper {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         helper.customText(
-                            headingText, 20, FontWeight.bold, Colors.black),
+                            headingText, 20, FontWeight.normal, Colors.black87),
                         helper.customText(descriptionText, 16,
                             FontWeight.normal, Colors.grey.shade400)
                       ],
@@ -141,7 +144,12 @@ class Helper {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    Expanded(child: Icon(Icons.arrow_forward_ios)),
+                    Expanded(
+                        child: Icon(
+                      Icons.arrow_forward_ios,
+                      size: 18,
+                      color: Colors.black54,
+                    )),
                   ],
                 ),
               )
@@ -202,7 +210,7 @@ class Helper {
       color: buttonColor,
       child: Helper().customText(
         buttonText,
-        17,
+        14,
         FontWeight.bold,
         textColor,
       ),
@@ -211,7 +219,7 @@ class Helper {
 
   Widget customListTile(
     String text,
-    IconData leaadingIcon,
+    String image,
     IconData trailingIcon,
   ) {
     return ListTile(
@@ -224,8 +232,14 @@ class Helper {
       ),
       // isThreeLine: true,
       // subtitle: Text('Secondary text\nTertiary text'),
-      leading: Icon(leaadingIcon),
-      trailing: Icon(trailingIcon),
+      leading: Image.asset(
+        image,
+        height: 20,
+      ),
+      trailing: Icon(
+        trailingIcon,
+        size: 18,
+      ),
     );
   }
 
@@ -239,37 +253,43 @@ class Helper {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Expanded(
-          child: Card(
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Helper().customImage(firstFlagPath, 150, 150),
-                Helper().customText(
-                    firstFlagText, 15, FontWeight.normal, Colors.black),
-                SizedBox(
-                  height: 8,
-                )
-              ],
+          child: Container(
+            height: 130,
+            child: Card(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12)),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Helper().customImage(firstFlagPath, 80, 80),
+                  Helper().customText(
+                      firstFlagText, 15, FontWeight.normal, Colors.black),
+                  SizedBox(
+                    height: 15,
+                  )
+                ],
+              ),
             ),
           ),
         ),
-        SizedBox(width: 15),
+        SizedBox(width: 35),
         Expanded(
-          child: Card(
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Helper().customImage(SecondFlagPath, 150, 150),
-                Helper().customText(
-                    secondFlagText, 15, FontWeight.normal, Colors.black),
-                SizedBox(
-                  height: 8,
-                )
-              ],
+          child: Container(
+            height: 130,
+            child: Card(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12)),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Helper().customImage(SecondFlagPath, 80, 80),
+                  Helper().customText(
+                      secondFlagText, 15, FontWeight.normal, Colors.black),
+                  SizedBox(
+                    height: 15,
+                  )
+                ],
+              ),
             ),
           ),
         ),
@@ -297,7 +317,7 @@ class Helper {
               SizedBox(
                 height: 5,
               ),
-              Helper().customText(text2, 12, FontWeight.normal, Colors.black),
+              Helper().customText(text2, 8, FontWeight.normal, Colors.black),
             ],
           ),
         ),
@@ -335,12 +355,12 @@ class Helper {
                         height: 8,
                       ),
                       Helper().customText(
-                          text2, 12, FontWeight.normal, Colors.black),
+                          text2, 10, FontWeight.normal, Colors.black),
                       SizedBox(
                         height: 8,
                       ),
                       Helper()
-                          .customText(text3, 14, FontWeight.bold, Colors.black),
+                          .customText(text3, 16, FontWeight.bold, Colors.black),
                       SizedBox(
                         height: 8,
                       ),
@@ -356,12 +376,12 @@ class Helper {
                     children: [
                       MaterialButton(
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8)),
+                              borderRadius: BorderRadius.circular(6)),
                           onPressed: () {},
-                          color: Colors.grey[200],
+                          color: Colors.grey[100],
                           child: Helper().customText(
                             "Review",
-                            16,
+                            14,
                             FontWeight.normal,
                             Colors.black,
                           )),
@@ -502,6 +522,7 @@ class Helper {
       ),
       child: Container(
         decoration: BoxDecoration(
+          color: Colors.white,
           borderRadius: BorderRadius.circular(12),
           border: Border.all(
             color: color,
@@ -510,7 +531,7 @@ class Helper {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 15.0, left: 25, right: 25),
+              padding: const EdgeInsets.only(top: 15.0, left: 15, right: 25),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -528,9 +549,6 @@ class Helper {
               child: Row(
                 children: [
                   Helper().customText(text2, 16, FontWeight.bold, Colors.black),
-                  SizedBox(
-                    height: 10,
-                  ),
                 ],
               ),
             ),
@@ -547,6 +565,9 @@ class Helper {
                 ],
               ),
             ),
+            SizedBox(
+              height: 5,
+            ),
             Padding(
               padding: const EdgeInsets.only(left: 15.0),
               child: Row(
@@ -560,6 +581,9 @@ class Helper {
                 ],
               ),
             ),
+            SizedBox(
+              height: 5,
+            ),
             Padding(
               padding: const EdgeInsets.only(left: 15.0),
               child: Row(
@@ -572,6 +596,9 @@ class Helper {
                   ),
                 ],
               ),
+            ),
+            SizedBox(
+              height: 5,
             ),
             Padding(
               padding: const EdgeInsets.only(left: 15.0, bottom: 15),

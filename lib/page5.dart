@@ -10,6 +10,7 @@ class page5 extends StatelessWidget {
   Widget build(BuildContext context) {
     var helper = Helper();
     return Scaffold(
+      backgroundColor: Color(0xffF4F4F4),
       body: SingleChildScrollView(
         child: SafeArea(
           child: Column(
@@ -28,28 +29,28 @@ class page5 extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top:60.0,left: 30,right:30),
+                padding: const EdgeInsets.only(top: 60.0, left: 30, right: 30),
                 child: Row(
                   children: [
                     helper.customText(
-                        "New Password", 20, FontWeight.bold, Colors.black),
+                        "New Password", 20, FontWeight.w600, Colors.black),
                   ],
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top:15.0,left: 30,right: 30),
+                padding: const EdgeInsets.only(top: 15.0, left: 30, right: 30),
                 child: Row(
                   children: [
                     helper.customText(
                         "Rest your password to recovery & Login\nto your account.",
                         15,
                         FontWeight.normal,
-                        Colors.grey.shade400),
+                        Colors.black54),
                   ],
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top:35.0,left:30,right: 30),
+                padding: const EdgeInsets.only(top: 35.0, left: 30, right: 30),
                 child: Helper().customTextField(
                     Icons.visibility_off,
                     Colors.grey,
@@ -57,7 +58,7 @@ class page5 extends StatelessWidget {
                     "New password",
                     17,
                     20,
-                    Colors.grey,
+                    Colors.grey.shade200,
                     0.5,
                     12,
                     Colors.black,
@@ -65,7 +66,7 @@ class page5 extends StatelessWidget {
                     12),
               ),
               Padding(
-                padding: const EdgeInsets.only(top:15.0,left:30,right: 30),
+                padding: const EdgeInsets.only(top: 15.0, left: 30, right: 30),
                 child: Helper().customTextField(
                     Icons.visibility_off,
                     Colors.grey,
@@ -81,7 +82,7 @@ class page5 extends StatelessWidget {
                     12),
               ),
               Padding(
-                padding: const EdgeInsets.only(top:15.0,left: 30,right: 30),
+                padding: const EdgeInsets.only(top: 20.0, left: 30, right: 30),
                 child: Container(
                   width: 330,
                   child: Helper().customButton(

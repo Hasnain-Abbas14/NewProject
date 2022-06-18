@@ -9,6 +9,7 @@ class page7 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xffF4F4F4),
       key: _scaffoldKey,
       drawer: Draweer(),
       body: SingleChildScrollView(
@@ -23,13 +24,16 @@ class page7 extends StatelessWidget {
                     Card(
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(12)),
-                        child: IconButton(
-                          onPressed: () {
+                        child: InkWell(
+                          onTap: () {
                             _scaffoldKey.currentState!.openDrawer();
                           },
-                          icon: Icon(
-                            Icons.menu,
-                            size: 20,
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(12),
+                            child: Container(
+                                height: 50,
+                                width: 50,
+                                child: Image.asset('images/menu.jpeg')),
                           ),
                         )),
                     Card(
@@ -39,13 +43,13 @@ class page7 extends StatelessWidget {
                             onPressed: () {},
                             icon: Icon(
                               Icons.add,
-                              size: 20,
+                              size: 30,
                             ))),
                   ],
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top:15,left: 25,right: 25),
+                padding: const EdgeInsets.only(top: 15, left: 25, right: 25),
                 child: Card(
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12)),
@@ -64,15 +68,15 @@ class page7 extends StatelessWidget {
                         12)),
               ),
               Padding(
-                  padding: const EdgeInsets.all( 20),
+                  padding: const EdgeInsets.all(20),
                   child: Row(
                     children: [
-                      helper.customText("Practice English", 16, FontWeight.bold,
+                      helper.customText("Practice English", 16, FontWeight.w600,
                           Colors.black),
                     ],
                   )),
               Padding(
-                padding: const EdgeInsets.only(top:10.0,left: 20,right: 20),
+                padding: const EdgeInsets.only(top: 10.0, left: 20, right: 20),
                 child: Card(
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12)),
@@ -86,18 +90,16 @@ class page7 extends StatelessWidget {
                           Positioned(
                               top: 2,
                               right: 2,
-
                               child: Image.asset(
                                 'images/cat.png',
                                 height: 50,
                                 width: 50,
                               )),
                           Positioned(
-
                             child: Row(
                               children: [
-                                helper.customText(
-                                    "\t\tCat", 16, FontWeight.bold, Colors.white),
+                                helper.customText("\t\tCat", 16,
+                                    FontWeight.bold, Colors.white),
                               ],
                             ),
                           ),
@@ -153,36 +155,36 @@ class page7 extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top:20,left: 20,right:20),
+                padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
                 child: Row(
                   children: [
                     Text(
                       "Groups",
                       style: TextStyle(
                         fontSize: 16,
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w600,
                       ),
                     ),
                   ],
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top:15.0,left: 20,right: 20),
+                padding: const EdgeInsets.only(top: 15.0, left: 20, right: 20),
                 child: helper.customClipper(
                     Colors.blue, "0%", "Home Words", "words reviewed 0/29"),
               ),
               Padding(
-                padding: const EdgeInsets.only(top:15.0,left: 20,right: 20),
+                padding: const EdgeInsets.only(top: 15.0, left: 20, right: 20),
                 child: helper.customClipper(
                     Colors.orange, "24%", "Food Words", "words reviewed 12/29"),
               ),
               Padding(
-                padding: const EdgeInsets.only(top:15.0,left: 20,right: 20),
+                padding: const EdgeInsets.only(top: 15.0, left: 20, right: 20),
                 child: helper.customClipper(
                     Colors.green, "0%", "Clothes Words", "words reviewed 0/29"),
               ),
               Padding(
-                padding: const EdgeInsets.only(top:15.0,left: 20,right: 20),
+                padding: const EdgeInsets.only(top: 15.0, left: 20, right: 20),
                 child: helper.customClipper(Colors.orange, "24%",
                     "Travel Words", "words reviewed 12/29"),
               ),

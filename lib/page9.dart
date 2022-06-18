@@ -12,6 +12,7 @@ class _page9State extends State<page9> {
   @override
   Widget build(context) {
     return Scaffold(
+      backgroundColor: Color(0xffF4F4F4),
       body: SingleChildScrollView(
         child: SafeArea(
           child: Column(
@@ -22,19 +23,22 @@ class _page9State extends State<page9> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Card(
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12)),
-                      child: IconButton(
-                          onPressed: () {
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12)),
+                        child: InkWell(
+                          onTap: () {
                             Get.to(page10());
                           },
-                          icon: Icon(
-                            Icons.menu,
-                            size: 20,
-                          )),
-                    ),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(12),
+                            child: Container(
+                                height: 50,
+                                width: 50,
+                                child: Image.asset('images/menu.jpeg')),
+                          ),
+                        )),
                     Helper()
-                        .customText("Foods", 20, FontWeight.bold, Colors.black),
+                        .customText("Foods", 20, FontWeight.w600, Colors.black),
                     Card(
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(12)),
@@ -44,7 +48,7 @@ class _page9State extends State<page9> {
                           },
                           icon: Icon(
                             Icons.add,
-                            size: 20,
+                            size: 30,
                             color: Colors.grey,
                           ),
                         )),
@@ -58,11 +62,11 @@ class _page9State extends State<page9> {
                   children: [
                     Expanded(child: Helper().customCard("123", "Total words")),
                     SizedBox(
-                      width: 4,
+                      width: 25,
                     ),
                     Expanded(child: Helper().customCard("60", "Wrong Words")),
                     SizedBox(
-                      width: 4,
+                      width: 25,
                     ),
                     Expanded(child: Helper().customCard("64", "Correct Word")),
                   ],
@@ -114,7 +118,7 @@ class _page9State extends State<page9> {
                   child: Helper().customText(
                       "Add a word", 12, FontWeight.bold, Colors.black),
                   onPressed: () {
-                    _showMyDialog1(context);
+                    _showMyDialog3(context);
                   },
                 ),
                 Divider(
@@ -124,7 +128,7 @@ class _page9State extends State<page9> {
                   child: Helper().customText(
                       "Add a group", 12, FontWeight.bold, Colors.black),
                   onPressed: () {
-                    _showMyDialog3(context);
+                    _showMyDialog1(context);
                   },
                 ),
               ],
@@ -152,7 +156,7 @@ class _page9State extends State<page9> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Helper().customText(
-                          "Add New Group", 16, FontWeight.bold, Colors.black),
+                          "Add New Group", 18, FontWeight.bold, Colors.black),
                       Icon(Icons.close),
                     ],
                   ),
@@ -161,7 +165,7 @@ class _page9State extends State<page9> {
                     child: Row(
                       children: [
                         Helper().customText(
-                            "Group Name", 14, FontWeight.normal, Colors.black),
+                            "Group Name", 14, FontWeight.bold, Colors.black),
                       ],
                     ),
                   ),
@@ -178,7 +182,7 @@ class _page9State extends State<page9> {
                       Colors.grey,
                       2,
                       12,
-                      Colors.black,
+                      Colors.grey.shade100,
                       2,
                       12),
                   SizedBox(
@@ -206,7 +210,7 @@ class _page9State extends State<page9> {
             content: Builder(
               builder: (context) {
                 return Container(
-                  height: 400,
+                  height: 500,
                   child: Column(
                     children: [
                       Row(
@@ -221,8 +225,12 @@ class _page9State extends State<page9> {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(12),
                           child: Container(
-                              color: Colors.grey[200],
-                              height: 100,
+                              decoration: BoxDecoration(
+                                  color: Colors.grey[200],
+                                  image: DecorationImage(
+                                      image: AssetImage(
+                                          "images/image upload.jpeg"))),
+                              height: 180,
                               width: double.infinity,
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.end,
@@ -231,7 +239,7 @@ class _page9State extends State<page9> {
                                       "Tap to add a descriptive image",
                                       12,
                                       FontWeight.normal,
-                                      Colors.black),
+                                      Colors.black87),
                                   SizedBox(height: 10),
                                 ],
                               )),
@@ -240,7 +248,7 @@ class _page9State extends State<page9> {
                       SizedBox(height: 15),
                       Helper().customTextField(
                           Icons.ac_unit,
-                          Colors.white,
+                          Colors.grey.shade100,
                           12,
                           "Tap to add a Word",
                           10,
@@ -248,21 +256,21 @@ class _page9State extends State<page9> {
                           Colors.grey,
                           2,
                           12,
-                          Colors.black,
+                          Colors.grey.shade100,
                           2,
                           12),
                       SizedBox(height: 15),
                       Helper().customTextField(
                           Icons.volume_up,
-                          Colors.black,
+                          Colors.grey.shade100,
                           20,
-                          "Add examples",
+                          "Tap to add your examples sentence",
                           10,
                           20,
-                          Colors.grey,
+                          Colors.grey.shade100,
                           2,
                           12,
-                          Colors.black,
+                          Colors.grey.shade100,
                           2,
                           12),
                       Padding(

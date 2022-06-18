@@ -7,6 +7,7 @@ class page10 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xffF4F4F4),
       body: SingleChildScrollView(
         child: SafeArea(
           child: Column(
@@ -22,7 +23,7 @@ class page10 extends StatelessWidget {
                         },
                         icon: Icon(
                           Icons.arrow_back,
-                          size: 20,
+                          size: 25,
                         )),
                     Helper().customText("Foods groups review", 16,
                         FontWeight.bold, Colors.black),
@@ -35,7 +36,7 @@ class page10 extends StatelessWidget {
                           },
                           icon: Icon(
                             Icons.add,
-                            size: 20,
+                            size: 25,
                             color: Colors.black,
                           ),
                         )),

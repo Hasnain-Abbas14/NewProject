@@ -64,13 +64,16 @@ class _Page15State extends State<Page15> {
                                   top: -9,
                                   right: -9,
                                   child: Container(
-                                    height: 28,
-                                    width: 28,
+                                    height: 30,
+                                    width: 30,
                                     decoration: BoxDecoration(
                                         color: Colors.green[200],
                                         borderRadius:
                                             BorderRadius.circular(12)),
-                                    child: Icon(Icons.add_box),
+                                    child: Image.asset(
+                                      'images/pronunication.jpeg',
+                                      height: 20,
+                                    ),
                                   ))
                             ],
                           ),
@@ -141,16 +144,14 @@ class _Page15State extends State<Page15> {
                                   top: -9,
                                   right: -9,
                                   child: Container(
-                                      height: 28,
-                                      width: 28,
+                                      height: 30,
+                                      width: 30,
                                       decoration: BoxDecoration(
                                           color: Colors.orange[200],
                                           borderRadius:
                                               BorderRadius.circular(12)),
-                                      child: Icon(
-                                        Icons.message,
-                                        size: 20,
-                                      )))
+                                      child:
+                                          Image.asset('images/comment.jpeg')))
                             ],
                           ),
                         ],
@@ -219,13 +220,14 @@ class _Page15State extends State<Page15> {
                                   top: -9,
                                   right: -9,
                                   child: Container(
-                                      height: 28,
-                                      width: 28,
-                                      decoration: BoxDecoration(
-                                          color: Colors.orange[200],
-                                          borderRadius:
-                                              BorderRadius.circular(12)),
-                                      child: Icon(Icons.favorite)))
+                                    height: 30,
+                                    width: 30,
+                                    decoration: BoxDecoration(
+                                        color: Colors.orange[200],
+                                        borderRadius:
+                                            BorderRadius.circular(12)),
+                                    child: Icon(Icons.favorite),
+                                  ))
                             ],
                           ),
                         ],

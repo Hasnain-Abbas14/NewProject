@@ -16,7 +16,7 @@ class _page11State extends State<page11> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[100],
+      backgroundColor: Color(0xffF4F4F4),
       body: SingleChildScrollView(
         child: SafeArea(
           child: Column(
@@ -29,24 +29,28 @@ class _page11State extends State<page11> {
                 child: Row(
                   children: [
                     Expanded(
-                        flex: 2,
-                        child: Card(
+                      flex: 2,
+                      child: Card(
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(12)),
-                          child: Container(
-                            height: 40,
-                            child: IconButton(
-                                onPressed: () {
-                                  Get.to(page12());
-                                },
-                                icon: Icon(Icons.menu)),
-                          ),
-                        )),
+                          child: InkWell(
+                            onTap: () {
+                              Get.to(page12());
+                            },
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(12),
+                              child: Container(
+                                  height: 50,
+                                  width: 50,
+                                  child: Image.asset('images/menu.jpeg')),
+                            ),
+                          )),
+                    ),
                     Expanded(
-                        flex: 12,
+                        flex: 10,
                         child: Center(
                             child: Container(
-                                child: Helper().customText("General Setting",
+                                child: Helper().customText("General settings",
                                     20, FontWeight.bold, Colors.black)))),
                   ],
                 ),

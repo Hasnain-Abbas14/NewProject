@@ -18,15 +18,20 @@ class page12 extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Card(
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12)),
-                      child: IconButton(
-                          onPressed: () {},
-                          icon: Icon(
-                            Icons.menu,
-                            size: 20,
-                          )),
-                    ),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12)),
+                        child: InkWell(
+                          onTap: () {
+                            // Get.to(page12());
+                          },
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(12),
+                            child: Container(
+                                height: 50,
+                                width: 50,
+                                child: Image.asset('images/menu.jpeg')),
+                          ),
+                        )),
                     Helper().customText(
                         "Subscription", 25, FontWeight.bold, Colors.black),
                     Card(
@@ -38,7 +43,7 @@ class page12 extends StatelessWidget {
                           },
                           icon: Icon(
                             Icons.add,
-                            size: 20,
+                            size: 30,
                             color: Colors.grey,
                           ),
                         )),
@@ -50,12 +55,18 @@ class page12 extends StatelessWidget {
               ),
               Helper().customText(
                   "Choose your plan", 16, FontWeight.normal, Colors.grey),
+              SizedBox(
+                height: 10,
+              ),
               Helper().customContainer1(
                   "MONTHLY", "\$10/month", Colors.blue, Colors.blue),
+              SizedBox(
+                height: 25,
+              ),
               Helper().customContainer1(
                   "ANNUALY", "\$100/year", Colors.grey, Colors.grey),
               SizedBox(
-                height: 120,
+                height: 60,
               ),
               Container(
                   width: 320,

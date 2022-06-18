@@ -36,16 +36,22 @@ class _page14State extends State<page14> {
                             child: Column(
                               children: [
                                 Card(
-                                    child: IconButton(
-                                        onPressed: () {
-                                          _showMyDialog(context);
-                                          // Get.to(Page15());
-                                        },
-                                        icon: Icon(
-                                          Icons.menu,
-                                          color: Colors.black,
-                                          size: 20,
-                                        ))),
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(12)),
+                                    child: InkWell(
+                                      onTap: () {
+                                        _showMyDialog(context);
+                                      },
+                                      child: ClipRRect(
+                                        borderRadius: BorderRadius.circular(12),
+                                        child: Container(
+                                            height: 50,
+                                            width: 50,
+                                            child: Image.asset(
+                                                'images/menu.jpeg')),
+                                      ),
+                                    )),
                               ],
                             ),
                           ),
@@ -181,18 +187,37 @@ class _page14State extends State<page14> {
                         .customContainer(Colors.green, Colors.green, "Sashmi"),
                   ),
                   Positioned(
-                    top: 600,
-                    left: 25,
-                    right: 25,
-                    child: Helper()
-                        .customContainer(Colors.white, Colors.grey, "Bycicle"),
+                    top: 590,
+                    left: 22,
+                    right: 22,
+                    child: Card(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12)),
+                      child: Helper().customContainer(
+                          Colors.white54, Colors.grey, "Bycicle"),
+                    ),
                   ),
-                  Positioned(
-                      top: 690,
-                      left: 25,
-                      right: 25,
+                  // Positioned(
+                  //     top: 690,
+                  //     left: 25,
+                  //     right: 25,
+                  //     child: Helper().customButton(
+                  //         Page15(), "Next", Colors.white, Colors.black, 12))
+                ],
+              ),
+              SizedBox(
+                height: 490,
+              ),
+              Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 25, right: 0),
+                    child: Container(
+                      width: 330,
                       child: Helper().customButton(
-                          Page15(), "Next", Colors.white, Colors.black, 12))
+                          Page15(), "Next", Colors.white, Colors.black, 12),
+                    ),
+                  ),
                 ],
               ),
               SizedBox(

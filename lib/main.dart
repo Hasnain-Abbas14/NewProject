@@ -6,6 +6,7 @@ import 'package:flutter_application_1/page12.dart';
 import 'package:flutter_application_1/page13.dart';
 import 'package:flutter_application_1/page14.dart';
 import 'package:flutter_application_1/page15.dart';
+import 'package:flutter_application_1/page2.dart';
 
 import 'package:flutter_application_1/page6.dart';
 import 'package:flutter_application_1/page7.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: page14(),
+      home: page2(),
     );
   }
 }
