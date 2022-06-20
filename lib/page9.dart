@@ -12,6 +12,7 @@ class _page9State extends State<page9> {
   @override
   Widget build(context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Color(0xffF4F4F4),
       body: SingleChildScrollView(
         child: SafeArea(
@@ -246,31 +247,31 @@ class _page9State extends State<page9> {
                         ),
                       ),
                       SizedBox(height: 15),
-                      Helper().customTextField(
+                      Helper().customDialogTextField(
                           Icons.ac_unit,
-                          Colors.grey.shade100,
+                          Colors.grey.shade200,
                           12,
                           "Tap to add a Word",
                           10,
                           20,
-                          Colors.grey,
+                          Colors.grey.shade200,
                           2,
                           12,
-                          Colors.grey.shade100,
+                          Colors.grey.shade200,
                           2,
                           12),
                       SizedBox(height: 15),
-                      Helper().customTextField(
+                      Helper().customDialogTextField(
                           Icons.volume_up,
-                          Colors.grey.shade100,
+                          Colors.grey.shade200,
                           20,
                           "Tap to add your examples sentence",
                           10,
                           20,
-                          Colors.grey.shade100,
+                          Colors.grey.shade200,
                           2,
                           12,
-                          Colors.grey.shade100,
+                          Colors.grey.shade200,
                           2,
                           12),
                       Padding(

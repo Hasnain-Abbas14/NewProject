@@ -61,6 +61,80 @@ class Helper {
     );
   }
 
+  Widget customTextFieldSearch(
+    String hinttext,
+    double contentPadingVertical,
+    double contentPadinghorizontal,
+    Color focusBoarderColor,
+    double focusBoarderwidth,
+    double focusborderRadius,
+    Color enableBoarderColor,
+    double enableBoarderwidth,
+    double enableBorderRadius,
+  ) {
+    return TextField(
+      decoration: InputDecoration(
+        hintText: hinttext,
+        fillColor: Colors.white,
+        filled: true,
+        contentPadding: EdgeInsets.symmetric(
+            vertical: contentPadingVertical,
+            horizontal: contentPadinghorizontal),
+        focusedBorder: OutlineInputBorder(
+          borderSide:
+              BorderSide(color: focusBoarderColor, width: focusBoarderwidth),
+          borderRadius: BorderRadius.all(Radius.circular(focusborderRadius)),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderSide:
+              BorderSide(color: enableBoarderColor, width: enableBoarderwidth),
+          borderRadius: BorderRadius.all(Radius.circular(enableBorderRadius)),
+        ),
+      ),
+    );
+  }
+
+  Widget customDialogTextField(
+    IconData icon,
+    Color iconcolor,
+    double iconsize,
+    String hinttext,
+    double contentPadingVertical,
+    double contentPadinghorizontal,
+    Color focusBoarderColor,
+    double focusBoarderwidth,
+    double focusborderRadius,
+    Color enableBoarderColor,
+    double enableBoarderwidth,
+    double enableBorderRadius,
+  ) {
+    return TextField(
+      decoration: InputDecoration(
+        suffixIcon: Icon(
+          icon,
+          color: iconcolor,
+          size: iconsize,
+        ),
+        hintText: hinttext,
+        fillColor: Colors.grey.shade200,
+        filled: true,
+        contentPadding: EdgeInsets.symmetric(
+            vertical: contentPadingVertical,
+            horizontal: contentPadinghorizontal),
+        focusedBorder: OutlineInputBorder(
+          borderSide:
+              BorderSide(color: focusBoarderColor, width: focusBoarderwidth),
+          borderRadius: BorderRadius.all(Radius.circular(focusborderRadius)),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderSide:
+              BorderSide(color: enableBoarderColor, width: enableBoarderwidth),
+          borderRadius: BorderRadius.all(Radius.circular(enableBorderRadius)),
+        ),
+      ),
+    );
+  }
+
   Widget customImage(
     String imagePath,
     double height,
@@ -89,7 +163,7 @@ class Helper {
             color: Colors.white70,
             // borderRadius: BorderRadius.circular(16),
             border: Border(
-              left: BorderSide(width: 5.0, color: bordercolor),
+              left: BorderSide(width: 8.0, color: bordercolor),
             ),
           ),
           child: Row(
@@ -330,14 +404,17 @@ class Helper {
     return Padding(
       padding: const EdgeInsets.only(top: 10.0, left: 25, right: 25),
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(
+          12,
+        ),
         child: Container(
             //  width: 330,
+
             height: 150,
             decoration: BoxDecoration(
               color: Colors.white70,
               border: Border(
-                left: BorderSide(width: 5.0, color: bordercolor),
+                left: BorderSide(width: 10.0, color: bordercolor),
               ),
             ),
             child: Row(

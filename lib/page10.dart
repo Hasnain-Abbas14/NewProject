@@ -53,16 +53,16 @@ class page10 extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(32),
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(12),
                             child: Container(
                               decoration: BoxDecoration(
                                 color: Colors.white70,
                                 border: Border(
                                   left: BorderSide(
-                                      width: 5.0, color: Colors.blue),
+                                      width: 8.0, color: Colors.blue),
                                 ),
                               ),
                               child: Column(
@@ -182,16 +182,16 @@ class page10 extends StatelessWidget {
                         SizedBox(
                           width: 20,
                         ),
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(32),
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(12),
                             child: Container(
                               decoration: BoxDecoration(
                                 color: Colors.white70,
                                 border: Border(
                                   left: BorderSide(
-                                      width: 5.0, color: Colors.orange),
+                                      width: 8.0, color: Colors.orange),
                                 ),
                               ),
                               child: Column(

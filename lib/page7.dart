@@ -53,19 +53,32 @@ class page7 extends StatelessWidget {
                 child: Card(
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12)),
-                    child: helper.customTextField(
-                        Icons.search,
-                        Colors.black,
-                        20,
-                        "Search group",
-                        20,
-                        20,
-                        Colors.white,
-                        1,
-                        12,
-                        Colors.white,
-                        1,
-                        12)),
+                    child: TextField(
+                      decoration: InputDecoration(
+                        suffixIcon: ClipRRect(
+                          borderRadius: BorderRadius.circular(18),
+                          child: Container(
+                              height: 20,
+                              width: 20,
+                              child: Image.asset('images/search.jpeg')),
+                        ),
+                        hintText: "Search Group",
+                        fillColor: Colors.white,
+                        filled: true,
+                        contentPadding:
+                            EdgeInsets.symmetric(vertical: 12, horizontal: 12),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide:
+                              BorderSide(color: Colors.white, width: 12),
+                          borderRadius: BorderRadius.all(Radius.circular(12)),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide:
+                              BorderSide(color: Colors.white, width: 12),
+                          borderRadius: BorderRadius.all(Radius.circular(12)),
+                        ),
+                      ),
+                    )),
               ),
               Padding(
                   padding: const EdgeInsets.all(20),
@@ -138,7 +151,7 @@ class page7 extends StatelessWidget {
                             right: 2,
                             child: MaterialButton(
                                 shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(12)),
+                                    borderRadius: BorderRadius.circular(8)),
                                 onPressed: () {},
                                 color: Colors.white,
                                 child: helper.customText(

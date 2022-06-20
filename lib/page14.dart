@@ -28,7 +28,7 @@ class _page14State extends State<page14> {
                   Positioned(
                     child: Container(
                       height: 200,
-                      color: Colors.black,
+                      color: Color(0xff212121),
                       child: Row(
                         children: [
                           Padding(

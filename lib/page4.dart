@@ -89,16 +89,16 @@ class page4 extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(top: 15.0, left: 25, right: 25),
                 child: Container(
-                  width: 330,
+                  // width: 330,
                   child: Container(
-                    width: 270,
+                    width: double.infinity,
                     child: Helper().customButton(
                         page5(), "Sign up", Colors.white, Colors.black, 12),
                   ),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 15, left: 30, right: 30),
+                padding: const EdgeInsets.only(top: 25, left: 30, right: 30),
                 child: Row(
                   children: [
                     Expanded(
@@ -135,11 +135,9 @@ class page4 extends StatelessWidget {
                         borderRadius: BorderRadius.circular(12)),
                     child: Container(
                       width: 330,
-                      child: Helper().customText(
-                          "                  Sign Up with Google",
-                          16,
-                          FontWeight.w600,
-                          Colors.black),
+                      alignment: Alignment.center,
+                      child: Helper().customText("Sign Up with Google", 16,
+                          FontWeight.w600, Colors.black),
                     ),
                   ),
                 ),

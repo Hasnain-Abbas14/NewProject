@@ -84,7 +84,7 @@ class page5 extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(top: 20.0, left: 30, right: 30),
                 child: Container(
-                  width: 330,
+                  width: double.infinity,
                   child: Helper().customButton(
                       page6(), "Save", Colors.white, Colors.black, 12),
                 ),

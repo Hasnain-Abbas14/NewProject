@@ -24,7 +24,7 @@ class _DraweerState extends State<Draweer> {
           child: Column(
             children: [
               Container(
-                color: Colors.black,
+                color: Color(0xff212121),
                 child: Column(
                   children: [
                     Padding(
