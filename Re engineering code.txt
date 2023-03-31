@@ -1,0 +1,656 @@
+class HomePage extends StatefulWidget {
+  HomePage({Key? key}) : super(key: key);
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      drawer: Drawer(
+        backgroundColor: Colors.blue,
+        child: Column(
+          children: [
+            Container(
+              child: Column(
+                children: [
+                  SizedBox(
+                    height: 75,
+                  ),
+                  CircleAvatar(
+                    radius: 45,
+                    backgroundColor: Colors.black,
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    'UserName',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold),
+                  )
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 25,
+            ),
+            Divider(
+              thickness: 2,
+              color: Colors.white,
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            ListTile(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => ReceivedFile()));
+                },
+                title: Text(
+                  'Received Files',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold),
+                ),
+                leading: Icon(
+                  Icons.file_copy,
+                  size: 30,
+                  color: Colors.white,
+                )),
+            ListTile(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => SendFile()));
+                },
+                title: Text(
+                  'Send Files',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold),
+                ),
+                leading: Icon(
+                  Icons.send_and_archive,
+                  size: 30,
+                  color: Colors.white,
+                )),
+            ListTile(
+                title: Text(
+                  'Settings',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold),
+                ),
+                leading: Icon(
+                  Icons.settings,
+                  size: 30,
+                  color: Colors.white,
+                )),
+            ListTile(
+                title: Text(
+                  'Logout',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold),
+                ),
+                leading: Icon(
+                  Icons.logout,
+                  size: 30,
+                  color: Colors.white,
+                )),
+          ],
+        ),
+      ),
+      appBar: AppBar(
+          title: Row(
+        children: [
+          Spacer(),
+          Text('Theircalling'),
+          Spacer(),
+          IconButton(onPressed: () {}, icon: Icon(Icons.upload))
+        ],
+      )),
+      body: Column(
+        children: [
+          Container(
+            height: 60,
+            color: Colors.blue,
+            child: Column(
+              children: [
+                SizedBox(
+                  height: 15,
+                ),
+                Row(
+                  children: [
+                    SizedBox(
+                      width: 25,
+                    ),
+                    Icon(
+                      Icons.file_copy,
+                      size: 30,
+                      color: Colors.white,
+                    ),
+                    SizedBox(
+                      width: 25,
+                    ),
+                    Text(
+                      '0 Files',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold),
+                    )
+                  ],
+                ),
+                SizedBox(
+                  height: 5,
+                ),
+              ],
+            ),
+          ),
+          SizedBox(
+            height: 35,
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => ImageFile()));
+            },
+            child: Padding(
+              padding: const EdgeInsets.only(left: 25.0, right: 25, bottom: 15),
+              child: Container(
+                height: 65,
+                color: Colors.blue.shade100,
+                child: Column(
+                  children: [
+                    SizedBox(
+                      height: 18,
+                    ),
+                    Row(
+                      children: [
+                        SizedBox(
+                          width: 20,
+                        ),
+                        Icon(
+                          Icons.image,
+                          size: 30,
+                          color: Colors.white,
+                        ),
+                        SizedBox(
+                          width: 25,
+                        ),
+                        Text(
+                          'Images (0)',
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 15,
+                              fontWeight: FontWeight.normal),
+                        ),
+                        Spacer(),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          size: 30,
+                          color: Colors.white,
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => VideoFile()));
+            },
+            child: Padding(
+              padding: const EdgeInsets.only(left: 25.0, right: 25, bottom: 15),
+              child: Container(
+                height: 65,
+                color: Colors.blue.shade100,
+                child: Column(
+                  children: [
+                    SizedBox(
+                      height: 18,
+                    ),
+                    Row(
+                      children: [
+                        SizedBox(
+                          width: 20,
+                        ),
+                        Icon(
+                          Icons.video_file,
+                          size: 30,
+                          color: Colors.white,
+                        ),
+                        SizedBox(
+                          width: 25,
+                        ),
+                        Text(
+                          'Videos (0)',
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 15,
+                              fontWeight: FontWeight.normal),
+                        ),
+                        Spacer(),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          size: 30,
+                          color: Colors.white,
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => AudioFile()));
+            },
+            child: Padding(
+              padding: const EdgeInsets.only(left: 25.0, right: 25, bottom: 15),
+              child: Container(
+                height: 65,
+                color: Colors.blue.shade100,
+                child: Column(
+                  children: [
+                    SizedBox(
+                      height: 18,
+                    ),
+                    Row(
+                      children: [
+                        SizedBox(
+                          width: 20,
+                        ),
+                        Icon(
+                          Icons.audio_file,
+                          size: 30,
+                          color: Colors.white,
+                        ),
+                        SizedBox(
+                          width: 25,
+                        ),
+                        Text(
+                          'Audio (0)',
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 15,
+                              fontWeight: FontWeight.normal),
+                        ),
+                        Spacer(),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          size: 30,
+                          color: Colors.white,
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Files()));
+            },
+            child: Padding(
+              padding: const EdgeInsets.only(left: 25.0, right: 25, bottom: 15),
+              child: Container(
+                height: 65,
+                color: Colors.blue.shade100,
+                child: Column(
+                  children: [
+                    SizedBox(
+                      height: 18,
+                    ),
+                    Row(
+                      children: [
+                        SizedBox(
+                          width: 20,
+                        ),
+                        Icon(
+                          Icons.file_copy,
+                          size: 30,
+                          color: Colors.white,
+                        ),
+                        SizedBox(
+                          width: 25,
+                        ),
+                        Text(
+                          'Files (0)',
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 15,
+                              fontWeight: FontWeight.normal),
+                        ),
+                        Spacer(),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          size: 30,
+                          color: Colors.white,
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+
+
+
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:umer_ui/Views/authentication.dart';
+import 'package:swipe_button/swipe_button.dart';
+
+class MyHomePage extends StatefulWidget {
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  @override
+  void initState() {
+    super.initState();
+    // Timer(
+    //     Duration(seconds: 3),
+    //     () => Navigator.pushReplacement(
+    //         context, MaterialPageRoute(builder: (context) => SecondScreen())));
+  }
+
+  String buttonTitle = "Slide";
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Color(0xff17181A),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SizedBox(
+                height: 200.0,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Column(
+                    children: [
+                      Image(
+                        image: AssetImage(
+                          "images/image1.png",
+                        ),
+                        fit: BoxFit.fill,
+                        height: 145.0,
+                        width: 250.0,
+                      ),
+                      Text(
+                        "Welcome",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 50.0,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 80.0,
+              ),
+              Container(
+                height: 110,
+                alignment: Alignment.center,
+                child: Padding(
+                  padding: const EdgeInsets.all(24.0),
+                  child: SwipeButton(
+                    thumb: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Align(
+                            widthFactor: 0.90,
+                            child: Icon(
+                              Icons.chevron_right,
+                              size: 30.0,
+                              color: Colors.white,
+                            )),
+                      ],
+                    ),
+                    content: Center(
+                      child: Text(
+                        buttonTitle,
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                    onChanged: (result) {
+                      if (result == SwipePosition.SwipeRight) {
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Authentication()));
+                      } else {}
+                    },
+                  ),
+                ),
+              )
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+
+
+
+
+import 'package:flutter/material.dart';
+
+class FileSharing extends StatefulWidget {
+  FileSharing({Key? key}) : super(key: key);
+
+  @override
+  State<FileSharing> createState() => _FileSharingState();
+}
+
+class _FileSharingState extends State<FileSharing> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('FileSharing'), centerTitle: true),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            SizedBox(
+              height: 185,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 40.0, right: 40),
+              child: MaterialButton(
+                color: Colors.greenAccent[700],
+                height: 50,
+                onPressed: () {},
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(
+                      Icons.attach_file,
+                      color: Colors.white,
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text(
+                      'Select File',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold),
+                    )
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Text(
+              'No File Selected',
+              style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold),
+            ),
+            SizedBox(
+              height: 45,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 40.0, right: 40),
+              child: MaterialButton(
+                color: Colors.greenAccent[700],
+                height: 50,
+                onPressed: () {},
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(
+                      Icons.upload_file,
+                      color: Colors.white,
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text(
+                      'Upload File',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold),
+                    )
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 45,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 40.0, right: 40),
+              child: MaterialButton(
+                color: Colors.greenAccent[700],
+                height: 50,
+                onPressed: () {},
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(
+                      Icons.list,
+                      color: Colors.white,
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text(
+                      'All File',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold),
+                    )
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Total Storage',
+                      style: TextStyle(
+                          color: Colors.green, fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      'Storage Used',
+                      style: TextStyle(
+                          color: Colors.green, fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      'Storage Remaining',
+                      style: TextStyle(
+                          color: Colors.green, fontWeight: FontWeight.bold),
+                    )
+                  ],
+                ),
+                SizedBox(
+                  width: 30,
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      ':: 100 MBs',
+                      style: TextStyle(
+                          color: Colors.green, fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      ':: 0 MBs',
+                      style: TextStyle(
+                          color: Colors.green, fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      ':: 100 MBs',
+                      style: TextStyle(
+                          color: Colors.green, fontWeight: FontWeight.bold),
+                    )
+                  ],
+                ),
+              ],
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
